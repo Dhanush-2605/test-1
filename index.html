@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CivilCo - Civil Engineering Startup</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="testimonials.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Thanvi Infra</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="slideshow-container">
+    <div class="slideshow-image"></div>
+    <button class="about-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      About Us
+    </button>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>
+      We are a Civil Engineering startup providing innovative and sustainable solutions 
+      in construction, infrastructure, and project management.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800" alt="Building Construction">
+        <h3>Building Construction</h3>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1590490359683-659c8b52f8af?w=800" alt="Road & Infrastructure">
+        <h3>Road & Infrastructure</h3>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800" alt="Project Management">
+        <h3>Project Management</h3>
+      </div>
+    </div>
+    <div class="explore-btn-container">
+      <a href="projects.html" class="explore-btn">Explore Projects</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials"></section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Thanvi Infra</h2>
+        <p>Delivering quality and innovation in construction projects for a better tomorrow.</p>
+      </div>
+      <div class="footer-right">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> civilco@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CivilCo. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("testimonials.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("testimonials").innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
